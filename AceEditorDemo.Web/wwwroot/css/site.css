@@ -1,37 +1,49 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    height: 100vh;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+header{
+    flex-shrink: 0;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+main{
+    flex: 1 0 auto;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+footer{
+    flex-shrink: 0;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.container-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+/*EDITOR PAGE*/
+.editor-layout-root {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 1fr 5px;
+    height: 90vh;
+    margin-left: 5px;
+}
+
+.editor-toolbar {
+    grid-column: span 12;
+}
+
+.editor-side-panel {
+    grid-column: span 2;
+    margin-right: 5px;
+}
+
+.editor-content {
+    grid-column: span 10;
+}
+
+.editor-footer {
+    grid-column: span 12;
 }
